@@ -2,11 +2,11 @@ class Person:
 
     people = {}
 
-    def __init__(self, name: str, age: int):
+    def __init__(self, name: str, age: int) -> None:
         self.name = name
         self.age = age
 
-        Person.people[name] = self    
+        Person.people[name] = self
 
 
 def create_person_list(people: list) -> list:
@@ -24,7 +24,7 @@ def create_person_list(people: list) -> list:
 
         if spouse_name is not None:
             setattr(instance, spouse_key, Person.people[spouse_name])
-            
+
         result_list.append(instance)
-        
+
     return result_list
